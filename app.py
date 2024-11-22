@@ -29,5 +29,8 @@ def echo():
     message = data.get('message', 'No message provided')
     return jsonify({"message": f"echo: {message}"})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__': 
+        #  環境変数 PORT を取得（デフォルトは 8000） 
+        port = int(os.environ.get('PORT', 8000)) 
+        #  デバッグモードをローカル環境では有効に、本番では無効に 
+        app.run(host='0.0.0.0', port=port, debug=False)
