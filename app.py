@@ -3,7 +3,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})  # CORS設定を更新
+CORS(app, resources={r"/api/*": {"origins": "https://tech0-gen-8-step3-testapp-node1-4.azurewebsites.net"}})  # CORS設定を更新
 
 @app.route('/', methods=['GET'])
 def hello():
